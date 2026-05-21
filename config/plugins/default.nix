@@ -11,6 +11,7 @@
     ./theme.nix
 
     ./telescope
+    ./orgmode
     ./langs
     ./ui
     ./util.nix
