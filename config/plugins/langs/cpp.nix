@@ -84,22 +84,5 @@ in
       };
     };
 
-    dap = {
-      adapters.executables.lldb.command = "${pkgs.lldb}/bin/lldb-vscode";
-
-      configurations.cpp = [
-        {
-          name = "C++";
-          type = "lldb";
-          request = "launch";
-          cwd = "\${workspaceFolder}";
-          program.__raw = ''
-            function()
-              return vim.fn.input('Executable path: ', vim.fn.getcwd() .. '/', 'file')
-            end
-          '';
-        }
-      ];
-    };
   };
 }
